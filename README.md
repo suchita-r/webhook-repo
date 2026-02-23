@@ -1,5 +1,5 @@
 # GitHub Webhook Event Tracker
-## Triger push event
+
 ## Overview
 
 This project captures GitHub webhook events (Push, Pull Request, and Merge), stores them in MongoDB Atlas, and displays them in a UI that automatically refreshes every 15 seconds.
