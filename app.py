@@ -1,14 +1,14 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from datetime import datetime, timezone
-from flask import render_template
 from pymongo import MongoClient
-mongo_uri = "mongodb+srv://suchita:Suchita123@cluster0.5tfhfcl.mongodb.net/github_webhooks?retryWrites=true&w=majority"
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+mongo_uri = os.getenv("MONGO_URI")
 
 client = MongoClient(mongo_uri)
-db = client["github_webhooks"]
-collection = db["events"]
-client = MongoClient(mongo_uri)
-
 db = client["github_webhooks"]
 collection = db["events"]
 
